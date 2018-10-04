@@ -17,7 +17,7 @@ def counter(func):
 
         result = func(*args, **kwargs)
         fim = time.perf_counter() - initial
-        print('Function {}({}) -> {:.6f} s to process.'.format(func.__name__, string, fim))
+        print('Function {}({}) -> {} to process.'.format(func.__name__, string, time.strftime("%H:%M:%S", time.gmtime(fim))))
 
         return result
 
